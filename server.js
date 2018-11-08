@@ -25,8 +25,14 @@ const port = process.env.PORT || 3000
 
 // INDEX route
 app.get('/', (req, res) => {
-    res.render('reviews-index', { reviews: reviews });
-    // res.render('home', { msg: 'Handlebars are Cool!' });
+    // res.render('reviews-index', { reviews: reviews });
+    res.render('home', { msg: 'Handlebars are Cool!' });
+})
+
+// SHOW FORM route
+app.get('/bloodInfo/new', (req, res) => {
+    // res.render('reviews-index', { reviews: reviews });
+    res.render('main-form');
 })
 
 app.listen(port, () => {
