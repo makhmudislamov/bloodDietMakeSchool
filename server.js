@@ -12,9 +12,9 @@ app.set('view engine', 'handlebars');
 // process.env.PORT >> remote port and 3000 >> local
 const port = process.env.PORT || 3000
 
-// first route
+// INDEX route
 app.get('/', (req, res) => {
-    res.send('this will be great platform')
+    res.render('home', { msg: 'Handlebars are Cool!' });
 })
 
 app.listen(port, () => {
