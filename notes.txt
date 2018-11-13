@@ -1,0 +1,26 @@
+MVC model map
+folder Models:
+
+
+folder Controllers:
+
+
+folder Views:
+- folder Layouts:
+    - main.hbs
+- folder Partials:
+    - form.hbs
+- home.hbs
+- main-form.hbs
+- reviews-index.hbs
+
+
+
+Routes:
+1. INDEX >>> "/blood" >>> GET landing page
+2. NEW >>> "/blood/new" >>> GET form
+3. CREATE >>> "/blood/:bloodId/diet" >>> POST input of new user
+4. SHOW >>> "/blood/:bloodId/diet/:dietId" >>> GET diet recommendation based on blood input
+5. EDIT >>> UPDATE >>> "/blood/:bloodId/diet/:dietId/edit" >>> GET the form input
+5. UPDATE >>> "/blood/:bloodId/diet/:dietId/" >>> PUT/PATCH the form input
+6. DESTROY >>> "/blood/:bloodId/diet/:dietId/" >>> DELETE the user input
