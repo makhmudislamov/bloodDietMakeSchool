@@ -35,6 +35,11 @@ app.get('/bloodInfo/new', (req, res) => {
     res.render('main-form');
 })
 
+// CREATE
+app.post('/bloodInfo/result', (req, res) => {
+    res.redirect('/')
+    console.log("working")
+})
 app.listen(port, () => {
     console.log('App listening on port 3000!')
 })
