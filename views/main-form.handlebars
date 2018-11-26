@@ -1,6 +1,6 @@
 <h1>we will have form here</h1>
 
-<form class="new-input" action="/bloodInfo/result" method="POST">
+<form class="new-input" action="/bloodInfo/result" method="GET">
     <div class="form-group">
         <label for="exampleFormControlInput1">Full Name</label>
         <input type="name" class="form-control" id="exampleFormControlInput1" placeholder="John Doe">
@@ -8,12 +8,12 @@
 
     <div class="form-group">
         <label for="exampleFormControlInput1">Weight</label>
-        <input type="name" class="form-control" id="exampleFormControlInput1" placeholder="John Doe">
+        <input type="name" class="form-control" id="exampleFormControlInput1" placeholder="155 lb">
     </div>
 
     <div class="form-group">
         <label for="exampleFormControlInput1">Height</label>
-        <input type="name" class="form-control" id="exampleFormControlInput1" placeholder="John Doe">
+        <input type="name" class="form-control" id="exampleFormControlInput1" placeholder="6'0">
     </div>
 
     <div class="form-group">
@@ -25,5 +25,9 @@
             <option>Blood Type O</option>
         </select>
     </div>
-    <button type="button" class="btn btn-primary">Submit</button>
+    {{!-- action is not happening after clickcing SUBMIT  --}}
+    {{!-- <button type="button" class="btn btn-primary">Submit</button> --}}
+
+    {{!-- after submitting the page is rendering home --}}
+    <input type="submit" class="btn btn-primary" value="Submit">
 </form>

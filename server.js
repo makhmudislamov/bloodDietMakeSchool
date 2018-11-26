@@ -26,7 +26,7 @@ const port = process.env.PORT || 3000
 // INDEX route
 app.get('/', (req, res) => {
     // res.render('reviews-index', { reviews: reviews });
-    res.render('home', { msg: 'Handlebars are Cool!' });
+    res.render('home');
 })
 
 // SHOW FORM route
@@ -36,10 +36,12 @@ app.get('/bloodInfo/new', (req, res) => {
 })
 
 // CREATE
-app.post('/bloodInfo/result', (req, res) => {
-    res.redirect('/')
+app.get('/bloodInfo/result', (req, res) => {
+    res.render('home')
     console.log("working")
 })
+
+
 app.listen(port, () => {
     console.log('App listening on port 3000!')
 })
