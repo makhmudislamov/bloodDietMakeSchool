@@ -30,16 +30,32 @@ app.get('/', (req, res) => {
 })
 
 // SHOW FORM route
-app.get('/bloodInfo/new', (req, res) => {
+app.get('/blood/new', (req, res) => {
     // res.render('reviews-index', { reviews: reviews });
     res.render('main-form');
 })
 
+
 // CREATE
-app.get('/bloodInfo/result', (req, res) => {
-    res.render('home')
+app.post('blood/:type/diet', (req, res) => {
+    
+})
+
+// SHOW
+app.get('/blood/:type/diet/:id', (req, res) => {
+    // res.render('home')
     console.log("working")
 })
+
+function showDiet() {
+    var select = document.getElementById("exampleFormControlSelect1").value
+        if (select == "A")
+            alert("yahhoooo type A diet is here")
+            // res.render("")
+
+}
+
+
 
 
 app.listen(port, () => {

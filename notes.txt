@@ -24,3 +24,19 @@ Routes:
 5. EDIT >>> UPDATE >>> "/blood/:bloodId/diet/:dietId/edit" >>> GET the form input
 5. UPDATE >>> "/blood/:bloodId/diet/:dietId/" >>> PUT/PATCH the form input
 6. DESTROY >>> "/blood/:bloodId/diet/:dietId/" >>> DELETE the user input
+
+
+
+Pseudocode for rendereing different pages when chosen different blood type options
+
+function returnDiet() {
+    var select = document.getElembyId("selectID").value
+    if (select == "A")
+        res.render("dietA")
+    else if (select == "B")
+        res.render("dietB")
+    else if (select == "AB")
+        res.render("dietAB")
+    else 
+        res.render("dietO")
+}
