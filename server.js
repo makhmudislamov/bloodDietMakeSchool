@@ -15,11 +15,13 @@ app.set('view engine', 'handlebars');
 mongoose.connect(process.env.MONGODB_URI ||'mongodb://localhost/dietPlatform', {useNewUrlParser: true});
 
 
-// OUR MOCK ARRAY OF PROJECTS
-let reviews = [
-    { title: "Great Review", movieTitle: "Batman II" },
-    { title: "Awesome Movie", movieTitle: "Titanic" }
-]
+
+const BloodType = mongoose.model("BloodType", {
+    fullName: String,
+    weight: String,
+    height: String,
+    types: String
+})
 
 
 
@@ -38,10 +40,11 @@ app.get('/blood/new', (req, res) => {
 
 // TODO: create route for new input
 // same name as the values  
+app.post('/blood/:type/diet')
 
 // 
 // CREATE
-app.get('blood/:type/diet', (req, res) => {
+app.get('/blood/:type/diet', (req, res) => {
     // call the func
 })
 
