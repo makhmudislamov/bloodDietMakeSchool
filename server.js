@@ -44,7 +44,10 @@ app.get('/blood/new', (req, res) => {
 // TODO: create route for new input
 // same name as the values  
 app.post('/blood', (req, res) => {
+    console.log(req.body.bloodTypes)
+
     BloodType.create(req.body).then((bloodtype) => {
+
         console.log(bloodtype);
         console.log(req.body)
         res.redirect('/blood/:type/diet');
@@ -54,10 +57,27 @@ app.post('/blood', (req, res) => {
     
 });
 
+app.get('/getblood', (req, res) => {
+    console.log('Get Blood!!!!')
+    console.log(req.query.type)
+    
+    // not reading type clrrectly
+    const type = req.query.type
+
+    if (type === 'A') {
+        res.json({ food: 'you should eat fish' })
+    } else if (type === 'B') {
+        res.json({ food: 'you should eat apples' })
+    } else {
+        res.json({ food: 'You should eat food!!!!!' })
+    }
+    
+})
+
 // 
 // 
 app.get('/blood/:type/diet', (req, res) => {
-    showDiet()
+    // showDiet()
 });
 
 // SHOW
@@ -66,12 +86,7 @@ app.get('/blood/:type/diet/:id', (req, res) => {
     console.log("working")
 });
 
-function showDiet() {
-    // var select = document.getElementsByName("bloodTypes").value
-        // if (select == "A")
-    console.log("diet for A")
-            // res.render("")
-}
+
 
 
 

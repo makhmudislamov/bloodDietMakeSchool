@@ -31,3 +31,33 @@
     {{!-- after submitting the page is rendering home --}}
     <input type="submit" class="btn btn-primary" value="Submit" >
 </form>
+
+<script>
+    console.log('Is this working????')
+
+    const bloodTypes = document.getElementById('exampleFormControlSelect1')
+
+    bloodTypes.addEventListener('change', function(e) {
+        console.log('Blood menu changed')
+        console.log(bloodTypes.value)
+        fetch(`/getblood?type=bloodTypes.value`).then((res) => {
+            console.log('res from server')
+            return res.json()
+        }).then((data) => {
+            console.log(data)
+        }).catch((err) => {
+            console.log('Error')
+            console.log(err.message)
+        })
+    })
+
+
+    // function showDiet() {
+        // var select = document.getElementsByName("bloodTypes").value
+        // if (select == "A")
+        // console.log("diet for A")
+        // res.render("")
+    // }
+
+    
+</script>
