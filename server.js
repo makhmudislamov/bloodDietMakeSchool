@@ -47,7 +47,7 @@ app.post('/blood', (req, res) => {
     BloodType.create(req.body).then((bloodtype) => {
         console.log(bloodtype);
         console.log(req.body)
-        res.redirect('/');
+        res.redirect('/blood/:type/diet');
     }).catch((err) => {
         console.log(err.message);
     })
@@ -57,7 +57,7 @@ app.post('/blood', (req, res) => {
 // 
 // 
 app.get('/blood/:type/diet', (req, res) => {
-    // call the func
+    showDiet()
 });
 
 // SHOW
@@ -66,13 +66,12 @@ app.get('/blood/:type/diet/:id', (req, res) => {
     console.log("working")
 });
 
-// function showDiet() {
-//     var select = document.getElementsByName("selectBlood").value
-//         if (select == "A")
-//             alert("yahhoooo type A diet is here")
-//             // res.render("")
-
-// }
+function showDiet() {
+    // var select = document.getElementsByName("bloodTypes").value
+        // if (select == "A")
+    console.log("diet for A")
+            // res.render("")
+}
 
 
 
