@@ -1,24 +1,24 @@
 <h1>we will have form here</h1>
 
-<form class="new-input"  action="/blood/new" >
+<form class="new-input"  action="/blood" method="POST" >
     <div class="form-group">
         <label for="exampleFormControlInput1">Full Name</label>
-        <input type="name" class="form-control" id="exampleFormControlInput1" placeholder="John Doe">
+        <input type="name" name="fullName" class="form-control" id="exampleFormControlInput1" placeholder="John Doe">
     </div>
 
     <div class="form-group">
         <label for="exampleFormControlInput1">Weight</label>
-        <input type="name" class="form-control" id="exampleFormControlInput1" placeholder="155 lb">
+        <input type="name" name="weight" class="form-control" id="exampleFormControlInput1" placeholder="155 lb">
     </div>
 
     <div class="form-group">
         <label for="exampleFormControlInput1">Height</label>
-        <input type="name" class="form-control" id="exampleFormControlInput1" placeholder="6'0">
+        <input type="name" name="height" class="form-control" id="exampleFormControlInput1" placeholder="6'0">
     </div>
 
     <div class="form-group">
         <label for="exampleFormControlSelect1">Select Your Blood Type</label>
-        <select class="form-control" name="selectBlood" id="exampleFormControlSelect1">
+        <select class="form-control" name="bloodTypes" id="exampleFormControlSelect1">
             <option value="A">Blood Type A</option>
             <option value="B" >Blood Type B</option>
             <option value="AB" >Blood Type AB</option>
