@@ -36,9 +36,13 @@ app.get('/blood/new', (req, res) => {
 })
 
 
+// TODO: create route for new input
+// same name as the values  
+
+// 
 // CREATE
-app.post('blood/:type/diet', (req, res) => {
-    
+app.get('blood/:type/diet', (req, res) => {
+    // call the func
 })
 
 // SHOW

@@ -29,7 +29,7 @@ Routes:
 
 Pseudocode for rendereing different pages when chosen different blood type options
 
-function returnDiet() {
+function showDiet() {
     var select = document.getElembyId("selectID").value
     if (select == "A")
         res.render("dietA")
@@ -40,3 +40,12 @@ function returnDiet() {
     else 
         res.render("dietO")
 }
+
+
+
+Questions:
+1. check function showDiet()
+- need name on select
+
+2. where to call the function?
+3. rendering pdf - non downladable >> ?
