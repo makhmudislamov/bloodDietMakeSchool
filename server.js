@@ -60,16 +60,20 @@ app.post('/blood', (req, res) => {
 app.get('/getblood', (req, res) => {
     console.log('Get Blood!!!!')
     console.log(req.query.type)
-    
-    // not reading type clrrectly
+
+    // not reading type correctly
     const type = req.query.type
 
     if (type === 'A') {
+        // res.render('typeA')
         res.json({ food: 'you should eat fish' })
+        console.log("diet list for A")
     } else if (type === 'B') {
         res.json({ food: 'you should eat apples' })
+        console.log("diet list for B")
     } else {
         res.json({ food: 'You should eat food!!!!!' })
+        console.log("diet list for other")
     }
     
 })

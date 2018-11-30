@@ -38,8 +38,11 @@
     const bloodTypes = document.getElementById('exampleFormControlSelect1')
 
     bloodTypes.addEventListener('change', function(e) {
+       // working 
         console.log('Blood menu changed')
+        // printing
         console.log(bloodTypes.value)
+        
         fetch(`/getblood?type=bloodTypes.value`).then((res) => {
             console.log('res from server')
             return res.json()
