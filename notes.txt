@@ -43,9 +43,15 @@ function showDiet() {
 
 
 
-Questions:
+Questions: (SOLVED)
 1. check function showDiet()
 - need name on select
 
 2. where to call the function?
 3. rendering pdf - non downladable >> ?
+
+
+TODO:
+1. convert pdf ot work
+2. render handlebars for each option
+3. work on styling
