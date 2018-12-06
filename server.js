@@ -47,10 +47,10 @@ app.post('/blood', (req, res) => {
     console.log(req.body.bloodTypes)
     const type = req.body.bloodTypes
     if (type === 'A') {
-         res.render('typeA')
-        // res.json({ food: 'you should eat fish' })
-        console.log("diet list for A")
-       
+        // it is rendering json file
+        const dietA = require('./views/dietA.json')
+        res.end(JSON.stringify(dietA))
+        // res.render('typeA')
     } else if (type === 'B') {
         res.end(JSON.stringify({ food: 'you should eat apples' }))
 
@@ -79,7 +79,7 @@ app.get('/getblood', (req, res) => {
     // console.log(req.query.type)
 
     // not reading type correctly
-    const type = document.getElementById('exampleFormControlSelect1')
+    // const type = document.getElementById('exampleFormControlSelect1')
 
     // console.log('type: ' + type)
     // if (type === 'A') {

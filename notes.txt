@@ -52,6 +52,6 @@ Questions: (SOLVED)
 
 
 TODO:
-1. convert pdf ot work
+1. convert pdf ot word/json >>> converted to word
 2. render handlebars for each option
-3. work on styling
+3. work on stylings
