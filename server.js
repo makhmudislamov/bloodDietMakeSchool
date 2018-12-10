@@ -48,18 +48,21 @@ app.post('/blood', (req, res) => {
     const type = req.body.bloodTypes
     if (type === 'A') {
         // it is rendering json file
-        const dietA = require('./views/dietA.json')
-        res.end(JSON.stringify(dietA))
-        // res.render('typeA')
+        // const dietA = require('./views/dietA.json')
+        // res.end(JSON.stringify(dietA))
+        res.render('typeA')
     } else if (type === 'B') {
-        res.end(JSON.stringify({ food: 'you should eat apples' }))
+        // res.end(JSON.stringify({ food: 'you should eat apples' }))
+        res.render('typeB')
 
     } else if (type === 'AB') {
-        res.end(JSON.stringify({ food: 'you should eat meat' }))
+        // res.end(JSON.stringify({ food: 'you should eat meat' }))
+        res.render('typeAB')
         
     } else {
-        res.end(JSON.stringify({ food: 'you should eat veggies' }))
-        console.log("diet list for other")
+        // res.end(JSON.stringify({ food: 'you should eat veggies' }))
+        res.render('typeO')
+        
     }
 
     // BloodType.create(req.body).then((bloodtype) => {
