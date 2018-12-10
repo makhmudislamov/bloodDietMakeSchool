@@ -3,40 +3,82 @@
 <head>
     <meta charset="utf-8">
     <title>Bloody Diet</title>
-    <link rel="stylesheet" href="./public/home.css">
+    {{!-- <link rel="stylesheet" href="./public/home.css"> --}}
 </head>
 <body>
-<div class="explanation">
-    <h1>Blood Type and Health</h1>
-    <p>
-        Do you think knowing your blood type is only important in the event of a transfusion? Think again! Research
-        indicates
-        that your blood type is a key genetic factor that influences many areas of health and well-being.
-
-        Throughout your life, you've probably observed that some people tend to lose weight more easily, while for
-        others,
-        their weight is an ongoing battle. Or wondered why some people are plagued by chronic illness while others stay
-        healthy
-        and vital well into their advanced years. Very simply, the answer is in your blood type.
-
-        Knowing your blood type is an important tool for understanding how your body reacts to food, your
-        susceptibility to
-        disease, your natural reaction to stress, and so much more. A single drop of blood contains a biochemical
-        makeup as
-        unique to you as your fingerprin
-    </p>
-    <div class="facts">
-        <h2>Five facts about your blood type:</h2>
-        <ul>
-            <li>Your blood type may predict your susceptibility for certain diseases.</li>
-            <li>People of different blood types react differently to stress.</li>
-            <li>Your blood type antigens are not just in your blood!</li>
-            <li>Gut bacteria is related to blood type.</li>
-            <li>A one-size-fits-all approach to nutrition does not work.</li>
-        </ul>
+   
+    <div class="container">
+        <div class="explanation">
+            <h2>Blood Type and Health</h2>
+            <p>
+                Do you think knowing your blood type is only important in the event of a transfusion? Think again! Research
+                indicates
+                that your blood type is a key genetic factor that influences many areas of health and well-being.
+        
+                Throughout your life, you've probably observed that some people tend to lose weight more easily, while for
+                others,
+                their weight is an ongoing battle. Or wondered why some people are plagued by chronic illness while others stay
+                healthy
+                and vital well into their advanced years. Very simply, the answer is in your blood type.
+        
+                Knowing your blood type is an important tool for understanding how your body reacts to food, your
+                susceptibility to
+                disease, your natural reaction to stress, and so much more. A single drop of blood contains a biochemical
+                makeup as
+                unique to you as your fingerprint
+            </p>
+            </div>
+            <div class="facts">
+                <h2>Five facts about your blood type:</h2>
+                <ul>
+                    <li>Your blood type may predict your susceptibility for certain diseases.</li>
+                    <li>People of different blood types react differently to stress.</li>
+                    <li>Your blood type antigens are not just in your blood!</li>
+                    <li>Gut bacteria is related to blood type.</li>
+                    <li>A one-size-fits-all approach to nutrition does not work.</li>
+                </ul>
+                    <a href="/blood/new"><button>Start</button></a>
+            </div>
+        
+        
     </div>
-</div>
-<a href="/blood/new"><button>Start</button></a>
 </body>
+    {{!-- STYLING THIS PAGE --}}
+<style>
+    body {
+        margin: 0;
+        width: 100%;
+        
+    }
+    .container  {
+        display: flex;
+        justify-content: space-between;
+        height: 1100px;  
+        border: 0;
+        margin: 0;
+        background-color: green;
+
+    }
+    .container > div {
+        display: flex;
+        justify-content: space-around;
+        height: 500px;
+        width: 1000px;
+    }
+    .container > .explanation {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background-color: antiquewhite;
+    }
+    .container > .facts {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background-color: aqua;
+    } 
+</style>
 
 </html>
