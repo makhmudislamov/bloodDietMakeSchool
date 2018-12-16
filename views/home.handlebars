@@ -39,32 +39,36 @@
                 </ul>
                     <a href="/blood/new"><button>Start</button></a>
             </div>
-        
-        
+    </div>
+    <div class="footer">
+        <footer>
+            <h3>Something</h3>
+            <h3>Something</h3>
+            <h3>Something</h3>
+            <h3>Something</h3>
+            <h3>Something</h3>
+            <h3>Something</h3>
+        </footer>
     </div>
 </body>
     {{!-- STYLING THIS PAGE --}}
 <style>
-    body {
-        margin: 0;
-        width: 100%;
-        
-    }
+   
     .container  {
         display: flex;
-        justify-content: space-between;
-     
-        height: 1100px;  
-        border: 0;
-       
-        background-color: green;
+        align-items: space-around;
+        height: 1100px; 
 
     }
     .container > div {
         display: flex;
-        
+        flex-direction: column;
         justify-content: space-around;
+        
         flex: 1;
+        margin-top: 400px;
+        margin-bottom: 200px;
+        
     }
     .container > .explanation {
         display: flex;
@@ -80,6 +84,9 @@
         align-items: center;
         background-color: aqua;
     } 
+    .footer {
+        background-color: green;
+    }
 </style>
 
 </html>
