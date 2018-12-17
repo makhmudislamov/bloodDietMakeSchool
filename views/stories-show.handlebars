@@ -3,10 +3,10 @@
     <div class="col-sm-6 col-sm-offset-3">
 
         <h1>{{story.userName}}</h1>
-        <h2>How Blood Type Helped Me: {{story.storyBody}}</h2> <br>
+        <h2>How Blood Type Helped Me: <br> {{story.storyBody}}</h2> <br>
         <p><a href="/stories/{{story._id}}/edit">Edit</a></p>
         <p>
-            <form method="POST" action="/orgs/{{story._id}}?_method=DELETE">
+            <form method="POST" action="/stories/{{story._id}}?_method=DELETE">
                 <button class="btn btn-primary" type="submit">Delete</button>
             </form>
         </p>

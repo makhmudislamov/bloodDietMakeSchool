@@ -1,6 +1,14 @@
-<a href="/stories/new"><button>new story</button></a>
 
-
-<div>
-    {{stories}}
+<div class="row">
+    <div class="col-sm-6 col-sm-offset-3">
+        <a href="/stories/new"><button class="btn btn-primary">new story</button></a>
+        
+        <div>
+            {{#each story}}
+            <div class="lead">
+                <a href="/stories/{{this._id}}" class="lead">{{this.title}}</a>
+            </div>
+            {{/each}}
+        </div>
+    </div>
 </div>

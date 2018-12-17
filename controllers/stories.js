@@ -21,7 +21,7 @@ module.exports = function (app) {
     app.post('/stories', (req, res) => {
         Story.create(req.body).then((story) => {
             console.log(story);
-            res.redirect(`/stories/${story._id}`);
+            res.redirect('/stories');
         }).catch((err) => {
             console.log(err.message);
         })
@@ -46,7 +46,7 @@ module.exports = function (app) {
 
     // UPDATE
     app.put('/stories/:id', (req, res) => {
-        Story.findByIdAndUpdate(req.params.id, req.body)
+        Story.findOneAndUpdate(req.params.id, req.body)
             .then(story => {
                 res.redirect(`/stories/${story._id}`)
             })
@@ -57,7 +57,7 @@ module.exports = function (app) {
 
     // DELETE
     app.delete('/stories/:id', function (req, res) {
-        console.log("DELETE the Organization")
+        console.log("DELETE the Story")
         Story.findByIdAndRemove(req.params.id).then((story) => {
             res.redirect('/stories');
         }).catch((err) => {
