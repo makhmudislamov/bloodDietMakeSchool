@@ -1,40 +1,54 @@
-<h1>we will have form here</h1>
+<div class="form-container">
+    <h2>Find out your Diet</h2>
+    <form class="new-input" action="/blood" method="POST">
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Full Name</label>
+    
+            <input type="name" name="fullName" class="form-control" id="exampleFormControlInput1" placeholder="John Doe">
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Weight</label>
+                <input type="name" name="weight" class="form-control" id="exampleFormControlInput1" placeholder="155 lb">
+            </div>
+    
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Height</label>
+                <input type="name" name="height" class="form-control" id="exampleFormControlInput1" placeholder="6'0">
+            </div>
+    
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">Select Your Blood Type</label>
+                <select class="form-control" name="bloodTypes" id="exampleFormControlSelect1">
+                    <option value="A">Blood Type A</option>
+                    <option value="B">Blood Type B</option>
+                    <option value="AB">Blood Type AB</option>
+                    <option value="O">Blood Type O</option>
+                </select>
+            </div>
+    
+            <input type="submit" class="btn btn-primary" value="Submit">
+    </form>
+</div>
+<style>
+    body {
+        background-color: #e8ede8;
+    }
+    
+    .form-container  {
+        margin-left: 300px;
+        margin-right: 300px;
 
-<form class="new-input"  action="/blood" method="POST" >
-    <div class="form-group">
-        <label for="exampleFormControlInput1">Full Name</label>
-        <input type="name" name="fullName" class="form-control" id="exampleFormControlInput1" placeholder="John Doe">
-    </div>
-
-    <div class="form-group">
-        <label for="exampleFormControlInput1">Weight</label>
-        <input type="name" name="weight" class="form-control" id="exampleFormControlInput1" placeholder="155 lb">
-    </div>
-
-    <div class="form-group">
-        <label for="exampleFormControlInput1">Height</label>
-        <input type="name" name="height" class="form-control" id="exampleFormControlInput1" placeholder="6'0">
-    </div>
-
-    <div class="form-group">
-        <label for="exampleFormControlSelect1">Select Your Blood Type</label>
-        <select class="form-control" name="bloodTypes" id="exampleFormControlSelect1">
-            <option value="A">Blood Type A</option>
-            <option value="B" >Blood Type B</option>
-            <option value="AB" >Blood Type AB</option>
-            <option value="O" >Blood Type O</option>
-        </select>
-    </div>
-    {{!-- action is not happening after clickcing SUBMIT  --}}
-    {{!-- <button type="button" class="btn btn-primary">Submit</button> --}}
-
-    {{!-- after submitting the page is rendering home --}}
-    <input type="submit" class="btn btn-primary" value="Submit" >
-</form>
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+    }
+    .form-container > h2 {
+        display: flex;
+        flex: 1;
+        align-content: center;
+    }
+</style>
 
 <script>
-    console.log('Is this working????')
-
     const bloodTypes = document.getElementById('exampleFormControlSelect1')
 
     bloodTypes.addEventListener('change', function(e) {
@@ -53,14 +67,5 @@
             console.log(err.message)
         })
     })
-
-
-    // function showDiet() {
-        // var select = document.getElementsByName("bloodTypes").value
-        // if (select == "A")
-        // console.log("diet for A")
-        // res.render("")
-    // }
-
-    
+   
 </script>
