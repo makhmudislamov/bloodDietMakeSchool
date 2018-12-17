@@ -27,7 +27,7 @@ app.listen(port, () => {
     console.log('App listening on port 3000!')
 });
 
-// stories(app);
+stories(app);
 bloodTypes(app);
 
 module.exports = app;

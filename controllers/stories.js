@@ -1,11 +1,11 @@
-// const Story = require('../models/story')
+const Story = require('../models/story')
 
 module.exports = function (app) {
     // INDEX
     app.get('/stories', (req, res) => {
         Story.find()
             .then(story => {
-                res.render('./stories/stories-index');
+                res.render('stories-index', {story: story});
             })
             .catch(err => {
                 console.log(err);
@@ -14,56 +14,41 @@ module.exports = function (app) {
 
     // NEW
     app.get('/stories/new', (req, res) => {
-        res.render('./stories/stories-new', {});
+        res.render('stories-new', {});
     })
-
-
+    
     // CREATE
     app.post('/stories', (req, res) => {
-        Story.create(req.body).then((charity) => {
-            console.log(charity);
-            res.redirect(`/stories/${charity._id}`);
+        Story.create(req.body).then((story) => {
+            console.log(story);
+            res.redirect(`/stories/${story._id}`);
         }).catch((err) => {
             console.log(err.message);
         })
     })
 
     // SHOW
-    // app.get('/orgs/:id', (req, res) => {
-    //     Charity.findById(req.params.id).then((charity) => {
+    app.get('/stories/:id', (req, res) => {
+        Story.findById(req.params.id).then((story) => {
 
-    //         res.render('orgs-show', { charity: charity })
-    //     }).catch((err) => {
-    //         console.log(err.message);
-    //     })
-    // })
-
-    app.get('/orgs/:id', (req, res) => {
-        // find review
-        Charity.findById(req.params.id).then(charity => {
-            // fetch its comments
-            Comment.find({ charityId: req.params.id }).then(comments => {
-                // respond with the template with both values
-                res.render('orgs-show', { charity: charity, comments: comments })
-            })
+            res.render('stories-show', { story: story })
         }).catch((err) => {
-            // catch errors
-            console.log(err.message)
-        });
-    });
+            console.log(err.message);
+        })
+    })
 
     // EDIT
-    app.get('/orgs/:id/edit', (req, res) => {
-        Charity.findById(req.params.id, function (err, charity) {
-            res.render('orgs-edit', { charity: charity });
+    app.get('/stories/:id/edit', (req, res) => {
+        Story.findById(req.params.id, function (err, story) {
+            res.render('stories-edit', { story: story });
         })
     })
 
     // UPDATE
-    app.put('/orgs/:id', (req, res) => {
-        Charity.findByIdAndUpdate(req.params.id, req.body)
-            .then(charity => {
-                res.redirect(`/orgs/${charity._id}`)
+    app.put('/stories/:id', (req, res) => {
+        Story.findByIdAndUpdate(req.params.id, req.body)
+            .then(story => {
+                res.redirect(`/stories/${story._id}`)
             })
             .catch(err => {
                 console.log(err.message)
@@ -71,10 +56,10 @@ module.exports = function (app) {
     })
 
     // DELETE
-    app.delete('/orgs/:id', function (req, res) {
+    app.delete('/stories/:id', function (req, res) {
         console.log("DELETE the Organization")
-        Charity.findByIdAndRemove(req.params.id).then((charity) => {
-            res.redirect('/');
+        Story.findByIdAndRemove(req.params.id).then((story) => {
+            res.redirect('/stories');
         }).catch((err) => {
             console.log(err.message);
         })
