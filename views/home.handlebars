@@ -3,10 +3,12 @@
 <head>
     <meta charset="utf-8">
     <title>Bloody Diet</title>
-    {{!-- <link rel="stylesheet" href="./public/home.css"> --}}
+    <link href="https://fonts.googleapis.com/css?family=Alegreya|Bree+Serif" rel="stylesheet">
 </head>
 <body>
-   
+    <div class="intro-container">
+        <h1>Dr. D'Adamo's Blood Type Diet: the most popular personalized diet system in the world.</h1>
+    </div>
     <div class="container">
         <div class="explanation">
             <h2>Blood Type and Health</h2>
@@ -40,20 +42,18 @@
                     <a href="/blood/new"><button>Start</button></a>
             </div>
     </div>
-    <div class="footer">
-        <footer>
-            <h3>Something</h3>
-            <h3>Something</h3>
-            <h3>Something</h3>
-            <h3>Something</h3>
-            <h3>Something</h3>
-            <h3>Something</h3>
-        </footer>
-    </div>
 </body>
     {{!-- STYLING THIS PAGE --}}
 <style>
-   
+    h1 {
+       font-family: 'Bree Serif', serif; 
+       color: green;
+    }
+    .intro-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 100px;
+    }
     .container  {
         display: flex;
         justify-content: space-between;
@@ -67,8 +67,11 @@
         padding: 15px;
         flex-basis: 45%;
         box-sizing: border-box;
-        margin-top: 400px;
+        margin-top: 200px;
         margin-bottom: 200px;
+        height: 500px;
+        font-family: 'Alegreya', serif;
+        color: green;
         
     }
     .container > .explanation {
@@ -76,18 +79,15 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background-color: antiquewhite;
+        
     }
     .container > .facts {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background-color: aqua;
     } 
-    .footer {
-        background-color: green;
-    }
+   
 </style>
 
 </html>
