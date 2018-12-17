@@ -1,6 +1,6 @@
 # Blood Diet
 
-**Blood Diet Website** is a web application that returns diet based on blood type
+**Blood Diet Website** is a web application that gives diet based on blood type
 
 
 ## User Stories
