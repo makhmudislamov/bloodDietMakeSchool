@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
 module.exports = mongoose.model('Story', {
-    userName: String,
-    story:String
+    userName : String,
+    storyBody : String
 })

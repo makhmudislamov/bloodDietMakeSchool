@@ -1,0 +1,12 @@
+<div class="row">
+    <div class="col-sm-6 col-sm-offset-3">
+        <form method="POST" action="/stories/{{story._id}}?_method=PUT">
+            <legend>Edit Your Story</legend>
+            {{> stories-form}}
+            <!-- BUTTON -->
+            <div class="form-group">
+                <button class="btn btn-primary" type="submit">Save your changes</button>
+            </div>
+        </form>
+    </div>
+</div>
