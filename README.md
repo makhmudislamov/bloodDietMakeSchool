@@ -14,3 +14,5 @@
 Link to live app: https://diet-platform-mssg.herokuapp.com/
 
 
+## Video Demo
+![walkthrough](demo-diet.gif)
